@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Doctor AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>🌿 Plant Doctor</h2>
+                <button id="newChatBtn" class="new-chat-btn">+ New Chat</button>
+            </div>
+            <div class="chat-history" id="chatHistory">
+                <!-- Previous chats will appear here -->
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main">
+            <!-- Top bar -->
+            <div class="topbar">
+                <h3 id="chatTitle">Plant Doctor AI</h3>
+            </div>
+
+            <!-- Messages -->
+            <div class="messages" id="messages">
+                <div class="welcome-message">
+                    <div class="welcome-icon">🌱</div>
+                    <h2>Welcome to Plant Doctor AI</h2>
+                    <p>Upload a photo of a plant leaf and I'll diagnose any diseases and tell you how to treat them.</p>
+                    <div class="welcome-tips">
+                        <div class="tip">📸 Upload a clear photo of the leaf</div>
+                        <div class="tip">🔍 Get instant disease diagnosis</div>
+                        <div class="tip">💊 Receive treatment advice</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-box">
+                    <label for="imageUpload" class="upload-btn" title="Upload plant image">
+                        📎
+                        <input type="file" id="imageUpload" accept="image/*" hidden>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Ask a follow-up question or upload a plant image..." 
+                    />
+                    <button id="sendBtn" class="send-btn">➤</button>
+                </div>
+                <p class="input-hint">Supports JPG, PNG images of plant leaves</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
